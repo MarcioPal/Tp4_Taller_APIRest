@@ -5,7 +5,10 @@
  */
 package com.example.demo.Entities;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +23,8 @@ public class Libro extends Base{
 
     private String titulo;
     private String genero;
-    private String autor;
     private int fecha;
     private int paginas;
+    @ManyToMany(cascade = CascadeType.REFRESH)
+    private List<Autor> autores;
 }

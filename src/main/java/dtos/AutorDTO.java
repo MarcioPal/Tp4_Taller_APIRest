@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.demo.Entities;
+package dtos;
 
-import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
-public class Autor  extends Base{
-
-    private String nombre;
+public class AutorDTO {
+        private String nombre;
     private String apellido;
-    private String biografia;        
+    private String biografia; 
 }
+
+
+       
